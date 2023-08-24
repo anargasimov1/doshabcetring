@@ -1,0 +1,11 @@
+@import url(./root.css);
+
+.text{
+    margin-top: 100px;
+    padding: 20px;
+    color: #47425e;
+    font-size: 20px;
+    font-style: oblique;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: aliceblue;
+}
