@@ -13,8 +13,23 @@ bar.onclick = () => {
 }
 
 const url = "https://meadow-silk-gauge.glitch.me/galery",
-    galery = document.getElementById("galery");
+    left = document.getElementById("left"),
+    rigth = document.getElementById("rigth"),
+    swiper = document.getElementById("swiper_slide"),
+    swiper_item = document.getElementById("swiper_item");
 
+let temp = 0;
+
+left.onclick = () => {
+    temp++;
+    swiper.style.transform = `translateX(${temp * -420}px)`
+}
+
+
+rigth.onclick = () => {
+    temp--;
+    swiper.style.transform = `translateX(${temp * -420}px)`
+}
 
 fetch(url)
     .then(res => res.json())
@@ -22,16 +37,6 @@ fetch(url)
     .catch(err => galery.innerHTML = err)
 
 function addelement(par) {
-    for (let i = 0; i < par.length; ++i) {
-        galery.innerHTML += `
-        
-        <div class="card">
-            <img src=${par[i].image} alt="./">
-            <p></p>
-        </div>
-    
-        
-        
-        `
-    }
-}   
+
+    par.map(i => swiper_item.innerHTML +=` <img src=${i.image} alt="./">`)
+}
