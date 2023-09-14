@@ -1,0 +1,61 @@
+@import url(./root.css);
+
+.contact {
+    margin-top: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+#message {
+    width: 400px;
+    outline: none;
+    border: 1px solid blue;
+    padding: 5px;
+}
+
+.inpusts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#name {
+    border: 2px solid rgba(0, 0, 255, 0.621);
+    outline: none;
+    border-radius: 5px;
+    width: 400px;
+    height: 40px;
+    padding: 5px;
+}
+
+#phone {
+    border: 2px solid rgba(0, 0, 255, 0.621);
+    outline: none;
+    border-radius: 5px;
+    width: 400px;
+    height: 40px;
+    padding: 5px;
+}
+
+#send {
+    transition: 0.5s ease all;
+    background: transparent;
+    border: 1px solid green;
+    width: 200px;
+    height: 30px;
+}
+
+#phone:focus,
+#message:focus,
+#name:focus {
+    box-shadow: blue 2px 0.5px 12px;
+}
+
+#send:hover {
+    scale: 1.2;
+}

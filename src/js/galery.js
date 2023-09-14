@@ -19,24 +19,35 @@ const url = "https://meadow-silk-gauge.glitch.me/galery",
     swiper_item = document.getElementById("swiper_item");
 
 let temp = 0;
+let count = 0;
+
+function addelement(par) {
+    count = par.length
+    par.map(i => swiper_item.innerHTML += ` <img class="image" src=${i.image} alt="./">`)
+}
 
 left.onclick = () => {
     temp++;
-    swiper.style.transform = `translateX(${temp * -420}px)`
+    swiper.style.transform = `translateX(${temp * -420}px)`;
+    if (temp === count - 3) {
+        temp = 0;
+    }
+
 }
 
 
 rigth.onclick = () => {
     temp--;
-    swiper.style.transform = `translateX(${temp * -420}px)`
+    if (temp === -1) {
+        temp = count -3
+    }
+    swiper.style.transform = `translateX(${temp * -420}px)`;
+   
+
 }
 
 fetch(url)
     .then(res => res.json())
     .then(data => addelement(data))
-    .catch(err => galery.innerHTML = err)
+    .catch(err => swiper.innerHTML = err)
 
-function addelement(par) {
-
-    par.map(i => swiper_item.innerHTML +=` <img src=${i.image} alt="./">`)
-}
