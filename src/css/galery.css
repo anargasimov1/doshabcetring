@@ -90,6 +90,10 @@
         width: 420px;
         margin-left: 10px;
     }
+
+    .image{
+        min-width:350px;
+    }
     .left{
         right: 75px;
     }
