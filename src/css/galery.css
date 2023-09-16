@@ -88,6 +88,7 @@
 @media only screen and (max-width:900px){
     .swiper{
         width: 420px;
+        margin-left: 10px;
     }
     .left{
         right: 75px;
