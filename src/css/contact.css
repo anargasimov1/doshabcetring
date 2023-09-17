@@ -67,3 +67,16 @@
 #phone:focus {
     box-shadow: 2px 2px 2px 2px blue;
 }
+
+@media only screen and (max-width:700px){
+    #message{
+        width: 300px;
+        height: 150px;
+    }
+    #name{
+        width: 300px;
+    }
+    #phone{
+        width: 300px;
+    }
+}
