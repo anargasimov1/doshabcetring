@@ -1,0 +1,69 @@
+@import url(./root.css);
+
+.contact {
+    margin: 150px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#message {
+    width: 500px;
+    height: 200px;
+    outline: none;
+    border: 2px solid blue;
+    padding: 10px;
+}
+
+#name {
+    width: 500px;
+    outline: none;
+    border: 2px solid blue;
+    padding: 10px;
+
+}
+
+#phone {
+    width: 500px;
+    outline: none;
+    border: 2px solid blue;
+    height: 30px;
+}
+
+
+#send {
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    color: green;
+    cursor: pointer;
+    transition: 0.5s ease all;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+#send:hover{
+    color: white;
+    background-color: green;
+}
+
+
+#message:focus {
+    box-shadow: 2px 2px 2px 2px blue;
+}
+
+#name:focus {
+    box-shadow: 2px 2px 2px 2px blue;
+}
+
+#phone:focus {
+    box-shadow: 2px 2px 2px 2px blue;
+}
