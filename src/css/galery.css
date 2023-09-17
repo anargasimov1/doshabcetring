@@ -1,13 +1,14 @@
 @import url(./root.css);
 
-.images{
+.images {
     position: fixed;
     top: 0;
     left: 0;
     z-index: -39;
     width: 100%;
     height: 100vh;
-    opacity: 0.9;
+    opacity: 0.1;
+    scale: 1.2;
 }
 
 
@@ -47,7 +48,7 @@
     height: 400px;
     border-radius: 40px;
     filter: contrast(1.3);
-    
+
 }
 
 .rigth {
@@ -72,32 +73,35 @@
     cursor: pointer;
 }
 
-.video{
+.video {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 }
 
 
-.video_content{
+.video_content {
     width: 750px;
     height: 450px;
 }
 
 
-@media only screen and (max-width:900px){
-    .swiper{
+@media only screen and (max-width:900px) {
+    .swiper {
         width: 420px;
     }
-    .left{
+
+    .left {
         right: 75px;
     }
-    .rigth{
+
+    .rigth {
         left: 105px;
     }
-.video_content{
-    width: 400px;
-    height: 300px;
-}
+
+    .video_content {
+        width: 400px;
+        height: 300px;
+    }
 
 }
