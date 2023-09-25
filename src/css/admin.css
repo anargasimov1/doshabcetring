@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.forma {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 30px 0;
+    align-items: center;
+}
+
+#ad {
+    width: 300px;
+    padding-left: 5px;
+    outline: none;
+    height: 30px;
+    border-radius: 12px;
+    border: 2px solid grey;
+}
+#link {
+    width: 300px;
+    padding-left: 5px;
+    outline: none;
+    height: 30px;
+    border-radius: 12px;
+    border: 2px solid grey;
+}
+#Btn{
+    background: transparent;
+    padding: 4px;
+    width: 100px;
+    border-radius: 12px;
+    background-color: rgba(0, 128, 0, 0.473);
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.cards{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: 2px solid grey;
+    border-radius: 12px;
+    padding: 5px 0;
+}
+
+
+.card_img{
+    width: 200px;
+    height: 300px;
+    
+}
+#btn{
+    width: 200px;
+    color: red;
+    background-color: rgba(255, 0, 0, 0.103);
+    border: none;
+    cursor: pointer;
+    padding: 3px 0;
+}
+.point{
+    pointer-events: none;
+}
