@@ -1,10 +1,25 @@
-
 const ad = document.getElementById("ad"),
     link = document.getElementById("link"),
     Btn = document.getElementById("Btn"),
     btn = document.getElementById("btn"),
     url = "https://meadow-silk-gauge.glitch.me/galery",
-    cards = document.querySelector(".cards")
+    cards = document.querySelector(".cards");
+
+
+
+
+let parol = localStorage.getItem("parol")
+
+window.onload = () => {
+    if (parol === null) {
+        window.location.href = "login.html"
+    }
+
+}
+
+
+
+
 
 
 function addelementtoscreen() {
@@ -21,8 +36,6 @@ function addelements(par) {
     <img class="card_img" src="${i.image}" alt="Doshabcatering">
     <button data-id="${i.id}" id="btn" type="button"><i class=" point fa-solid fa-trash-can"></i></button>
     </div>` )
-
-
 }
 
 Btn.onclick = () => {

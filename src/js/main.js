@@ -2,7 +2,7 @@
 
 const cards_1 = document.getElementById("cards_1"),
     card_2 = document.getElementById("cards_2"),
-    url_photos = "https://cottony-faithful-direction.glitch.me/photos";
+    url_photos = "https://sour-laser-ghoul.glitch.me/photos";
 
 fetch(url_photos)
     .then(r => r.json())

@@ -12,10 +12,11 @@ btn.onclick = () => {
         .then(data => adminpanel(data))
 }
 
+
 function adminpanel(par) {
     if (par.name === login.value && par.password === password.value) {
         window.location.href = "admin.html";
-        localStorage.setItem("parol", JSON.stringify(par))
+        localStorage.setItem("parol", "dogru")
     }
     else{
         text.style.display = "block";
