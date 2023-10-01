@@ -25,7 +25,7 @@ function add(par) {
     );
 
     let photos_2 = par.splice(0, 8);
-    console.log(photos_2)
+    
     photos_2.map(i => card_2.innerHTML +=
 
         `

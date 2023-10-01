@@ -4,6 +4,17 @@
     box-sizing: border-box;
 }
 
+.a{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+.a>a{
+    text-decoration: none;
+    font-size: 25px;
+
+}
+
 .forma {
     display: flex;
     flex-direction: column;
@@ -75,6 +86,31 @@
     cursor: pointer;
     padding: 3px 0;
 }
-.point{
+.point, .delete{
     pointer-events: none;
+}
+
+.delete{
+    color: red;
+}
+
+#list{
+    width: 700px;
+}
+
+.head{
+    font-weight: bold;
+    color: brown;
+}
+
+.mesaj{
+    display: flex;
+    justify-content: center;
+    margin: 70px 0;
+}
+
+@media only screen and (max-width:700px){
+    #ad, #link{
+        width: 300px;
+    }
 }
