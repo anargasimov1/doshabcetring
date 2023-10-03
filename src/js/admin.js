@@ -96,8 +96,72 @@ document.onclick = e => {
     let id = e.target.dataset.id;
 
     if (e.target.dataset.role) {
-        fetch(`${url_messages}/${id}`,{
-            method:"DELETE"
+        fetch(`${url_messages}/${id}`, {
+            method: "DELETE"
         })
     }
 }
+
+const lunch = document.getElementById("lunch")
+url_lunch = "https://low-shimmer-mulberry.glitch.me/photos",
+    newlunch = document.getElementById("add_lunch"),
+    btn_lunch = document.getElementById("btn_lunch"),
+    url_prince = "https://low-shimmer-mulberry.glitch.me/prince",
+    sendPrince = document.getElementById("sendPrince");
+
+fetch(url_lunch)
+    .then(res => res.json())
+    .then(data => addlunch(data))
+    .catch(err => lunch.innerHTML = err);
+
+function addlunch(par) {
+    par.map(i => lunch.innerHTML += ` <div class="card">
+    <img class="card_img" src="${i.img}" alt="Doshabcatering">
+    <button data-role ="remove" data-id="${i.id}" id="btn" type="button"><i class=" point fa-solid fa-trash-can"></i></button>
+    </div>`)
+}
+
+document.onclick = e => {
+    let id = e.target.dataset.id;
+
+    if (e.target.dataset.role === "remove") {
+        fetch(`${url_lunch}/${id}`, {
+            method: "DELETE"
+        })
+
+    }
+}
+
+btn_lunch.onclick = () => {
+    if (newlunch.value.trim() !== "") {
+        let element = {
+            img: newlunch.value
+        }
+        fetch(url_lunch, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(element)
+        })
+    }
+    if (sendPrince.value !== "") {
+        let newprince = {
+            prince: sendPrince.value
+        }
+        fetch(`${url_prince}/${1}`, {
+            method: "DELETE"
+        })
+            .then(fetch(url_prince, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(newprince)
+            }))
+    }
+    newlunch.value = "";
+    sendPrince.value = "";
+
+}
+

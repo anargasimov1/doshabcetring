@@ -58,3 +58,50 @@ fetch(url)
     .then(data => addelement(data))
     .catch(err => swiper.innerHTML = err)
 
+const url_photos = "https://low-shimmer-mulberry.glitch.me/photos",
+    photos = document.getElementById("photos"),
+    lunch = document.getElementById("lunch"),
+    price = document.getElementById("price"),
+    url_prince = "https://low-shimmer-mulberry.glitch.me/prince"
+
+fetch(url_photos)
+    .then(res => res.json())
+    .then(data => photo(data))
+    .catch(err => photos.innerHTML = err);
+
+fetch(url_prince)
+    .then(res => res.json())
+    .then(data => price.innerHTML = data.prince)
+
+
+function photo(par) {
+    for (let i = 0; i < par.length; ++i) {
+        photos.innerHTML +=
+            `
+        <div class="card">
+        <img class="image" src="${par[i].img}" alt="">
+          </div>
+        `
+    }
+}
+
+lunch.style.color = "red";
+
+setInterval(() => {
+    lunch.style.scale = "1.4";
+    price.style.scale = "1.4";
+
+}, 750)
+
+setInterval(() => {
+    lunch.style.scale = "0.8";
+    price.style.scale = "0.8";
+}, 1500)
+
+function businesslunch() {
+    if (innerWidth < 900) {
+        lunch.style.fontSize = "15px"
+    }
+}
+
+businesslunch()
