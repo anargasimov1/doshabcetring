@@ -71,7 +71,7 @@
     height: 300px;
     
 }
-#btn{
+.btn{
     width: 200px;
     color: red;
     background-color: rgba(255, 0, 0, 0.103);
@@ -117,5 +117,15 @@
 @media only screen and (max-width:700px){
     #ad, #link{
         width: 300px;
+    }
+    .bs_ln{
+        flex-direction: column;
+        align-items: center;
+    }
+    #add_lunch, #sendPrince{
+        width: 350px;
+    }
+    #list{
+        width: 400px;
     }
 }

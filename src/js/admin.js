@@ -1,12 +1,10 @@
 const ad = document.getElementById("ad"),
     link = document.getElementById("link"),
     Btn = document.getElementById("Btn"),
-    btn = document.getElementById("btn"),
     url_galery = "https://meadow-silk-gauge.glitch.me/galery",
     cards = document.querySelector(".cards"),
     url_messages = "https://best-fire-group.glitch.me/messages",
     list = document.getElementById("list");
-
 
 
 
@@ -18,6 +16,8 @@ window.onload = () => {
     }
 
 }
+
+// galery
 
 function addelementtoscreen() {
     fetch(url_galery)
@@ -31,8 +31,8 @@ addelementtoscreen();
 function addelements(par) {
     par.map(i => cards.innerHTML += ` <div class="card">
     <img class="card_img" src="${i.image}" alt="Doshabcatering">
-    <button data-id="${i.id}" id="btn" type="button"><i class=" point fa-solid fa-trash-can"></i></button>
-    </div>` )
+    <button data-id="${i.id}" class="btn" type="button"><i class=" point fa-solid fa-trash-can"></i></button>
+    </div>`);
 }
 
 Btn.onclick = () => {
@@ -52,19 +52,11 @@ Btn.onclick = () => {
     }
     ad.value = "";
     link.value = "";
-
+    addelementtoscreen();
 }
 
-document.onclick = (e) => {
-    if (e.target.dataset.id) {
-        let id = e.target.dataset.id;
 
-        fetch(`${url_galery}/${id}`, {
-            method: "DELETE"
-        })
-    }
-
-}
+// messages
 
 fetch(url_messages)
     .then(res => res.json())
@@ -88,19 +80,11 @@ function addmessages(par) {
        </tr>
 
         `
-
     }
+
 }
 
-document.onclick = e => {
-    let id = e.target.dataset.id;
-
-    if (e.target.dataset.role) {
-        fetch(`${url_messages}/${id}`, {
-            method: "DELETE"
-        })
-    }
-}
+// lunch
 
 const lunch = document.getElementById("lunch")
 url_lunch = "https://low-shimmer-mulberry.glitch.me/photos",
@@ -117,20 +101,10 @@ fetch(url_lunch)
 function addlunch(par) {
     par.map(i => lunch.innerHTML += ` <div class="card">
     <img class="card_img" src="${i.img}" alt="Doshabcatering">
-    <button data-role ="remove" data-id="${i.id}" id="btn" type="button"><i class=" point fa-solid fa-trash-can"></i></button>
+    <button data-delete ="remove" data-id="${i.id}" id="btn" type="button"><i class=" point fa-solid fa-trash-can"></i></button>
     </div>`)
 }
 
-document.onclick = e => {
-    let id = e.target.dataset.id;
-
-    if (e.target.dataset.role === "remove") {
-        fetch(`${url_lunch}/${id}`, {
-            method: "DELETE"
-        })
-
-    }
-}
 
 btn_lunch.onclick = () => {
     if (newlunch.value.trim() !== "") {
@@ -165,3 +139,32 @@ btn_lunch.onclick = () => {
 
 }
 
+
+// delete methods
+
+document.onclick = e => {
+
+    if (e.target.dataset.role) {
+        let id = e.target.dataset.id;
+        fetch(`${url_messages}/${id}`, {
+            method: "DELETE"
+        })
+
+    }
+    if (e.target.className === "btn") {
+        let id = e.target.dataset.id;
+
+        fetch(`${url_galery}/${id}`, {
+            method: "DELETE"
+        })
+
+
+    }
+    if (e.target.dataset.delete) {
+        let id = e.target.dataset.id
+        fetch(`${url_lunch}/${id}`, {
+            method: "DELETE"
+        })
+        console.log(e.target)
+    }
+}
