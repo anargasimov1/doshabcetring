@@ -1,5 +1,6 @@
 @import url(./root.css);
 
+
 .text{
     margin-top: 100px;
     padding: 20px;
@@ -8,8 +9,33 @@
     font-style: oblique;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: aliceblue;
+    height: auto;
+    text-align: justify;
 }
 .faq{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin: 50px 0;
+}
+
+.btn_faq{
+    width: 70%;
+    height: 35px;
+    border: none;
+    border-bottom: 2px solid red;
+    background: transparent;
+    color: rgba(0, 128, 0, 0.733);
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.faq_text{
+    width: 70% ;
+    font-size: 20px;
+    padding: 5px;
+    color: #47425e;
+    font-style: italic;
 }
