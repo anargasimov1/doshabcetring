@@ -100,15 +100,15 @@
 
 
 #message:focus {
-    box-shadow: 0px 4px 15px 8px rgba(0, 0, 255, 0.393);
+    box-shadow: 0px 0px 5px 4px rgba(0, 0, 255, 0.393);
 }
 
 #name:focus {
-    box-shadow: 0px 4px 15px 8px rgba(0, 0, 255, 0.393);
+    box-shadow: 0px 0px 5px 4px rgba(0, 0, 255, 0.393);
 }
 
 #phone:focus {
-    box-shadow: 0px 4px 15px 8px rgba(0, 0, 255, 0.393);
+    box-shadow: 0px px 5px 4px rgba(0, 0, 255, 0.393);
 }
 
 @media only screen and (max-width:700px) {

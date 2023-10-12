@@ -12,6 +12,20 @@
     height: auto;
     text-align: justify;
 }
+
+.header{
+    color: #47425e;
+    font-size: 35px;
+    font-style: italic;
+    font-family: sans-serif;
+    background-color: aliceblue;
+    margin-top: 100px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
 .faq{
     display: flex;
     flex-direction: column;
@@ -38,4 +52,9 @@
     padding: 5px;
     color: #47425e;
     font-style: italic;
+}
+@media only screen and (max-width:800px){
+    .header{
+        font-size: 20px;
+    }
 }
