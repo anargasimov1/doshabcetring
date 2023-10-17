@@ -53,7 +53,7 @@
     width: 500px;
     height: 200px;
     outline: none;
-    border: 2px solid rgba(0, 0, 255, 0.450);
+    border: 2px solid rgba(0, 0, 255, 0.9);
     padding: 10px;
     border-radius: 5px;
     transition: 0.4s ease all;
@@ -62,7 +62,7 @@
 #name {
     width: 500px;
     outline: none;
-    border: 2px solid rgba(0, 0, 255, 0.457);
+    border: 2px solid rgba(0, 0, 255, 0.897);
     padding: 10px;
     border-radius: 5px;
     transition: 0.4s ease all;
@@ -71,7 +71,7 @@
 #phone {
     width: 500px;
     outline: none;
-    border: 2px solid rgba(0, 0, 255, 0.457);
+    border: 2px solid rgba(0, 0, 255, 0.897);
     height: 30px;
     border-radius: 5px;
     padding-left: 5px;
@@ -104,11 +104,11 @@
 }
 
 #name:focus {
-    box-shadow: 0px 0px 5px 4px rgba(0, 0, 255, 0.393);
+    box-shadow: 0px 0px 5px 4px rgba(2, 2, 87, 0.703);
 }
 
 #phone:focus {
-    box-shadow: 0px px 5px 4px rgba(0, 0, 255, 0.393);
+    box-shadow: 0px 0px 5px 4px rgba(0, 0, 255, 0.393);
 }
 
 @media only screen and (max-width:700px) {
@@ -128,4 +128,5 @@
     #send {
         width: 300px;
     }
+    
 }

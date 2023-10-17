@@ -1,6 +1,5 @@
 
 // hamburger menu
-
 const bar = document.getElementById("bar"),
     hidden = document.getElementById("hidden");
 

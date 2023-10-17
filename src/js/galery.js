@@ -1,16 +1,17 @@
 
 
 const bar = document.getElementById("bar"),
-    hidden = document.getElementById("hidden");
+        hidden = document.getElementById("hidden");
 
 
-let modal = false;
+    let modal = false;
 
-bar.onclick = () => {
-    modal = !modal
+    bar.onclick = () => {
+        modal = !modal
 
-    modal ? hidden.style.height = "150px" : hidden.style.height = "0"
-}
+        modal ? hidden.style.height = "150px" : hidden.style.height = "0"
+    }
+
 
 const url = "https://meadow-silk-gauge.glitch.me/galery",
     left = document.getElementById("left"),
@@ -104,4 +105,5 @@ function businesslunch() {
     }
 }
 
-businesslunch()
+businesslunch();
+
