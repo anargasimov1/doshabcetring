@@ -165,6 +165,6 @@ document.onclick = e => {
         fetch(`${url_lunch}/${id}`, {
             method: "DELETE"
         })
-        console.log(e.target)
+       
     }
 }
