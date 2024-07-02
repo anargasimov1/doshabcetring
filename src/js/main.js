@@ -1,5 +1,6 @@
 "use strick";
 
+
 const cards_1 = document.getElementById("cards_1"),
     card_2 = document.getElementById("cards_2"),
     url_photos = "https://sour-laser-ghoul.glitch.me/photos";
@@ -25,7 +26,7 @@ function add(par) {
     );
 
     let photos_2 = par.splice(0, 8);
-    
+
     photos_2.map(i => card_2.innerHTML +=
 
         `

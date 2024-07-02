@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Galery</title>
     <script src="https://kit.fontawesome.com/c378ec51b4.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./src/css/contact.css">
+    <link rel="stylesheet" href="../css/galery.css">
 </head>
 
 <body>
-<img class="body_img" src="https://media.istockphoto.com/id/1224838022/vector/customer-service-woman-operator-call-center-with-headphones-and-microphone-with-laptop.jpg?s=612x612&w=0&k=20&c=afWsgGVk5IBg_CmMrYZgmyyCH25M7mGyUO8NCdWvTOA=" alt="">
     <!-- Navbar -->
+    <img class="images" src="./images/1561933293.dining12.jpg" alt="">
 
     <head class="head">
         <div id="navbar" class="navbar">
             <ul type="none" class="nav_link">
-                <li><a id="head" href="./index.html">Ana Səhifə</a></li>
+                <li><a id="head" href="../../index.html">Ana Səhifə</a></li>
                 <li><a href="./about.html">Haqqımızda</a></li>
                 <li><img class="logo" src="./images/logo.jpg" alt="Doshabcatering"></li>
                 <li><a href="./galery.html">Qaleriya</a></li>
@@ -30,7 +30,7 @@
         <p id="bar"><i class="fa-solid fa-bars"></i></p>
         <div class="nav_hidden_link">
             <ul id="hidden" class="link_hidden" type="none">
-                <li><a href="./index.html">Ana Sehife</a></li>
+                <li><a href="../../index.html">Ana Sehife</a></li>
                 <li><a href="./about.html">Haqqimizda</a></li>
                 <li><a href="./galery.html">Qaleriya</a></li>
                 <li><a href="./contact.html">Elaqe</a></li>
@@ -38,20 +38,37 @@
         </div>
     </div>
 
-  <div class="main">
-    <div class="section">
-        <p class="title">BİZƏ YAZIN BİZ SİZƏ GERİ DÖNÜŞ EDƏCİYİK</p>
-    </div>
 
-    <div class="contact">
-        <textarea placeholder="Mesajınız" id="message" cols="30" rows="10"></textarea>
-        <div class="inputs">
-            <input autocomplete="off" type="text" id="name" placeholder="Adınızı qeyd edin">
-            <input type="number" id="phone" placeholder="Telefon nömrənizi qeyd edin">
-            <button id="send" type="button">Göndər</button>
+
+
+    <!-- swiper -->
+    <div class="swiper">
+        <div id="swiper_slide" class="swiper_slide">
+            <div id="swiper_item" class="swiper_item">
+            </div>
+
         </div>
     </div>
-  </div>
+    <button id="rigth" class="rigth" type="button"><i class="fa-solid fa-angles-left"></i></button>
+    <button id="left" class="left" type="button"><i class="fa-solid fa-angles-right"></i></button>
+
+    <!-- contecnt -->
+    <div class="photos">
+        <p>HƏFTƏ İÇİ ÖZƏL TƏKLİFLƏR</p>
+        <span id="lunch">BUSINESS LUNCH MENYULARIMIZ</span>
+        <div id="photos" class="cards">
+           
+        </div>
+        <p id="price"></p>
+    </div>
+
+
+    <!-- video -->
+    <div class="video">
+        <video controls class="video_content" src="./videos/VID-20230822-WA0025.mp4"></video>
+    </div>
+
+    <!-- footer -->
 
     <div class="footer">
         <div class="footer_text">
@@ -77,7 +94,7 @@
         </div>
     </div>
 
-    <script src="./src/js/contact.js"></script>
+    <Script src="../js/galery.js"></Script>
 </body>
 
 </html>

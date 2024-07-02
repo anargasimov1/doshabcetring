@@ -1,4 +1,4 @@
-
+"use strick"
 
 const bar = document.getElementById("bar"),
         hidden = document.getElementById("hidden");
@@ -24,7 +24,7 @@ let count = 0;
 
 
 
-function addelement(par) {
+function addElements(par) {
     count = par.length
     par.map(i => swiper_item.innerHTML += ` <img  src=${i.image} alt="./">`)
 }
@@ -56,8 +56,8 @@ rigth.onclick = () => {
 
 fetch(url)
     .then(res => res.json())
-    .then(data => addelement(data))
-    .catch(err => swiper.innerHTML = err)
+    .then(data => addElements(data))
+    .catch(err => swiper.innerHTML = "<h2 style='color: red'>serverle elaqe qurula bilmedi</h2>")
 
 const url_photos = "https://low-shimmer-mulberry.glitch.me/photos",
     photos = document.getElementById("photos"),
@@ -68,7 +68,7 @@ const url_photos = "https://low-shimmer-mulberry.glitch.me/photos",
 fetch(url_photos)
     .then(res => res.json())
     .then(data => photo(data))
-    .catch(err => photos.innerHTML = err);
+    .catch(err => photos.innerHTML = "serverle elaqe qurula bilnmedi");
 
 fetch(url_prince)
     .then(res => res.json())
